@@ -1,0 +1,11 @@
+description: This component saves the transcript.txt, summary.txt, and summary.mp3
+  files to disk. It takes the PodcastTranscript (from TranscribePodcast), PodcastSummary
+  (from GenerateSummary), and PodcastSummaryAudio (from GenerateAudio) as inputs,
+  processes them, and provides the paths to the generated output files in the form
+  of a TranscriptSummaryAudioResponse object as the output.
+name: SaveOutputs
+parameters:
+  output_directory: outputs
+  summary_audio_filename: summary.mp3
+  summary_filename: summary.txt
+  transcript_filename: transcript.txt
