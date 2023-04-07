@@ -1,7 +1,9 @@
 description: This component transcribes the podcast audio file using the Whisper ASR
   API. It takes an audio file as input and generates a text transcript of the podcast
   as output.
+input-class: TranscribePodcastInputDict
 name: TranscribePodcast
+output-class: TranscribePodcastOutputDict
 parameters:
   api_key: YOUR_API_KEY
   language_code: en-US
