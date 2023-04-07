@@ -1,0 +1,37 @@
+yaml
+components:
+  node-0:
+    class: FetchPodcast
+    module-path: components/fetch_podcast/fetch_podcast.py
+    configuration: !include components/fetch_podcast/configuration.yml
+  node-1:
+    class: TranscribePodcast
+    module-path: components/transcribe_podcast/transcribe_podcast.py
+    configuration: !include components/transcribe_podcast/configuration.yml
+  node-2:
+    class: GenerateSummary
+    module-path: components/generate_summary/generate_summary.py
+    configuration: !include components/generate_summary/configuration.yml
+  node-3:
+    class: GenerateAudio
+    module-path: components/generate_audio/generate_audio.py
+    configuration: !include components/generate_audio/configuration.yml
+  node-4:
+    class: SaveOutputs
+    module-path: components/save_outputs/save_outputs.py
+    configuration: !include components/save_outputs/configuration.yml
+
+flow-matrix:
+  [
+    [0, 1, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0]
+  ]
+
+mapper:
+  node-0.PodcastAudioFile: node-1.PodcastAudioFile
+  node-1.PodcastTranscript: node-4.PodcastTranscript
+  node-2.PodcastSummary: node-4.PodcastSummary
+  node-3.PodcastSummaryAudio: node-4.PodcastSummaryAudio
