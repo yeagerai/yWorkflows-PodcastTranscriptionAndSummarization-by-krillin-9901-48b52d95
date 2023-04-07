@@ -1,0 +1,9 @@
+
+os
+typing
+yaml==5.4.1
+python-dotenv==0.19.2
+fastapi==0.73.0
+pydantic==1.9
+requests==2.27.1
+core
