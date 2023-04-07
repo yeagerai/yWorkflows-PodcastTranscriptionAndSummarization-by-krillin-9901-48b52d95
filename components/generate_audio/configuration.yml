@@ -1,5 +1,7 @@
 description: This component generates an audio mp3 file from the podcast summary using
   the Eleven Labs API. It takes the podcast summary as input and outputs the corresponding
   mp3 audio file of the podcast summary.
+input-class: GenerateAudioInputDict
 name: GenerateAudio
+output-class: GenerateAudioOutputDict
 parameters: {}
