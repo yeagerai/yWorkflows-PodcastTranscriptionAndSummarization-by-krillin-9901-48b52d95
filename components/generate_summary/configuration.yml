@@ -1,5 +1,7 @@
 description: 'This component summarizes the podcast transcript using the OpenAI ChatGPT
   API. Inputs: PodcastTranscript (from TranscribePodcast). Outputs: PodcastSummary
   (the summary text of the podcast).'
+input-class: GenerateSummaryInputDict
 name: GenerateSummary
+output-class: GenerateSummaryOutputDict
 parameters: {}
