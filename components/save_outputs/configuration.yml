@@ -3,7 +3,9 @@ description: This component saves the transcript.txt, summary.txt, and summary.m
   (from GenerateSummary), and PodcastSummaryAudio (from GenerateAudio) as inputs,
   processes them, and provides the paths to the generated output files in the form
   of a TranscriptSummaryAudioResponse object as the output.
+input-class: SaveOutputsInputDict
 name: SaveOutputs
+output-class: TranscriptSummaryAudioResponse
 parameters:
   output_directory: outputs
   summary_audio_filename: summary.mp3
